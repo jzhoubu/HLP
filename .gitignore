@@ -1,0 +1,11 @@
+*.pyc
+*.json
+*.jsonl
+*.csv
+experiments
+command
+apex
+data
+data_*
+notebook
+model-card.md

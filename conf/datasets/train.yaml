@@ -1,0 +1,40 @@
+# @package _group_
+
+dl:
+  _target_: dpr.data.biencoder_data.JsonlQADataset
+  file: ${HLP_HOME}/data/train/dl_10m.jsonl
+
+cm:
+  _target_: dpr.data.biencoder_data.JsonlQADataset
+  file: ${HLP_HOME}/data/train/cm_10m.jsonl
+
+nq_train:
+  _target_: dpr.data.biencoder_data.JsonlQADataset
+  file: ${HLP_HOME}/data/train/nq-train.jsonl
+
+nq_dev:
+  _target_: dpr.data.biencoder_data.JsonlQADataset
+  file: ${HLP_HOME}/data/train/nq-dev.jsonl
+
+trivia_train:
+  _target_: dpr.data.biencoder_data.JsonlQADataset
+  file: ${HLP_HOME}/data/train/trivia-train.jsonl
+
+trivia_dev:
+  _target_: dpr.data.biencoder_data.JsonlQADataset
+  file: ${HLP_HOME}/data/train/trivia-dev.jsonl
+
+webq_train:
+  _target_: dpr.data.biencoder_data.JsonlQADataset
+  file: ${HLP_HOME}/data/train/webq-train.jsonl
+  
+webq_dev:
+  _target_: dpr.data.biencoder_data.JsonlQADataset
+  file: ${HLP_HOME}/data/train/webq-dev.jsonl
+
+marco_dev:
+  _target_: dpr.data.biencoder_data.JsonlQADataset
+  file: ${HLP_HOME}/data/train/marco-dev.json
+
+
+

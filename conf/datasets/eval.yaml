@@ -1,0 +1,17 @@
+# @package _group_
+
+nq_test:
+  _target_: dpr.data.retriever_data.CsvQASrc
+  file: ${HLP_HOME}/data/eval/nq-test.qa.csv
+
+trivia_test:
+  _target_: dpr.data.retriever_data.CsvQASrc
+  file: ${HLP_HOME}/data/eval/trivia-test.qa.csv
+
+webq_test:
+  _target_: dpr.data.retriever_data.CsvQASrc
+  file: ${HLP_HOME}/data/eval/webq-test.qa.csv
+  
+marco_dev:
+  _target_: dpr.data.retriever_data.CsvQASrc
+  file: ${HLP_HOME}/data/eval/marco-dev.csv

@@ -1,0 +1,11 @@
+# @package _group_
+dpr_wiki:
+  _target_: dpr.data.retriever_data.CsvCtxSrc
+  file: ${HLP_HOME}/data/corpus/psgs_w100.tsv
+  id_prefix: 'dpr_wiki:'
+
+
+bioasq_passages:
+  _target_: dpr.data.retriever_data.CsvCtxSrc
+  file: ${HLP_HOME}/data/corpus/bioasq_passages.tsv
+  id_prefix: 'bioasq_passages:'
