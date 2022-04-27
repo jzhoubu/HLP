@@ -33,12 +33,12 @@ We choose the snapshot 03-01-2021 of an English Wikipedia dump, and process it w
 
 - **NQ/Trivia/WebQ** 
   - Source of [train/dev/test/corpus]: the [DPR](https://github.com/facebookresearch/DPR) repository. <br>
-  - Modification: For each sample, we only keep the top1 positive ctx and remove all negatvies. 
+  - Note: For each sample, we only keep the top1 positive ctx and remove all negatvies. 
 
 
 - **HotpotQA** (full wiki)
   - Source of [train/dev/corpus]: [HotpotQA Homepage](https://hotpotqa.github.io/).  <br>
-  - Modification: We use the negatives provided by [Path Retriever](https://github.com/AkariAsai/learning_to_retrieve_reasoning_paths) (Akari Asai et al. 2020).
+  - Note: We use the negatives provided by [Path Retriever](https://github.com/AkariAsai/learning_to_retrieve_reasoning_paths) (Akari Asai et al. 2020).
 
 
 - **MS MARCO** (document ranking)
