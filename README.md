@@ -3,7 +3,7 @@
 
 This is the official implementation of our ACL'2022 paper "[Hyperlink-induced Pre-training for Passage Retrieval in OpenQA](https://arxiv.org/pdf/2203.06942.pdf)".
 
-Acknowledgements: our implementation is based on the [DPR](https://github.com/facebookresearch/DPR) repository with minor modifications. Huge thanks to all the authors and contributors of the DPR repository!
+Acknowledgements: our implementation is based on the [DPR](https://github.com/facebookresearch/DPR) repository with minor modifications. Huge thanks to all the authors and contributors of the DPR repository!👏
 
 
 
@@ -24,7 +24,7 @@ Acknowledgements: our implementation is based on the [DPR](https://github.com/fa
 ## Overview
 In this paper, we propose **H**yper**L**ink-induced **P**re-training (HLP), a pre-training method to learn effective Q-P relevance induced by the hyperlink topology within naturally-occurring Web documents. Specifically, these Q-P pairs are automatically extracted from the online documents with relevance adequately designed via hyperlink-based topology to facilitate downstream retrieval for question answering. 
 
-<p align="center"><img width="100%" src="figures/hlp.jpg" /></p>
+<p align="center"><img width="90%" src="figures/hlp.jpg" /></p>
 
 
 
@@ -87,9 +87,9 @@ If you prefer using other data location, you can change the coerrsponding file p
 - `${HLP_HOME}/experiments/hlp20210726/train` 
   - [hlp20210726.best](https://drive.google.com/file/d/10vg8-6S4Rnn7wZOxfBmn2C4il0oV0Oyk/view?usp=sharing)
 - `${HLP_HOME}/experiments/hlp20220402/train` (pretrained with latest DPR implementation)
-  - [hlp20220402.best](https://drive.google.com/file/d/118DQW2uEK4yUWaTL_4kFzA4K9s-YtHLA/view?usp=sharing) (Recommand)
+  - [hlp20220402.best](https://drive.google.com/file/d/118DQW2uEK4yUWaTL_4kFzA4K9s-YtHLA/view?usp=sharing) (Recommand✅)
 
-More information of these checkpoints can be found in the [model-card](https://github.com/jzhoubu/HLP/tree/master/model-card.md).
+More information of these checkpoints can be found in the [model-card](https://github.com/jzhoubu/HLP/blob/preview/model-card.md).
 
 ## Experiments
 ### Retriever Training
