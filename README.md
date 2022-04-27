@@ -64,9 +64,11 @@ This command will automatically download the necessary data (about 50GB) for exp
 
 Besides, you can also manually download the data. Noted that after downloading, you need to move them to corresponding subdirectory as below:
 
+
+
 **Data Location**
 - `${HLP_HOME}/data/train` (train- & val-set)
-  - [dl_10m.jsonl](https://drive.google.com/file/d/1a_uTRst9Tts-GhyRWaE3WFdKDOfI5M6f/view?usp=sharing), [cm_10m.jsonl](https://drive.google.com/file/d/1-0fmEM2-Ay-TGELutbf2A6_n3UsvO5sZ/view?usp=sharing)
+  - [dl_10m.jsonl](https://drive.google.com/file/d/10YIohcsXAHKFzF2L43qkxH5zYkzTw70R/view?usp=sharing), [cm_10m.jsonl](https://drive.google.com/file/d/10YWz5WN_qJAXVCON47R1cWx2j8MScR1_/view?usp=sharing)
   - [nq-train.jsonl](https://drive.google.com/file/d/1-3fy6UcjVJLt6CW7vRp_OkWb37WMBRBR/view?usp=sharing), [nq-dev.jsonl](https://drive.google.com/file/d/1-4BgqIfd8r-mK8cWP4nunOqowsG0xAJT/view?usp=sharing)
   - [trivia-train.jsonl](https://drive.google.com/file/d/1-5ew6FNHYmauz5YoCKhnAb6wlTNpwEN6/view?usp=sharing), [trivia-dev.jsonl](https://drive.google.com/file/d/1-7qJY872hwoXN9bQQUtbV82BqVCUjSOA/view?usp=sharing)
   - [webq-train.jsonl](https://drive.google.com/file/d/1-7DZ9dPTGIen7_dy4816v4r3fQ-F5h3C/view?usp=sharing),[webq-dev.jsonl](https://drive.google.com/file/d/1-6HgRQ7ocB72rxgsaOhHIkOk176RWfau/view?usp=sharing)
@@ -80,6 +82,12 @@ Besides, you can also manually download the data. Noted that after downloading, 
   - [psgs_w100.tsv](https://dl.fbaipublicfiles.com/dpr/wikipedia_split/psgs_w100.tsv.gz)
 
 If you prefer using other data location, you can change the coerrsponding file path which are pre-defined in the yaml files under `conf` directory.
+
+**Checkpoint Location**
+- `${HLP_HOME}/experiments/hlp20210726/train` 
+  - [hlp20210726.best](https://drive.google.com/file/d/10vg8-6S4Rnn7wZOxfBmn2C4il0oV0Oyk/view?usp=sharing)
+- `${HLP_HOME}/experiments/hlp20220402/train` (pretrained with latest DPR implementation)
+  - [hlp20220402.best](https://drive.google.com/file/d/118DQW2uEK4yUWaTL_4kFzA4K9s-YtHLA/view?usp=sharing)(recommand)
 
 
 ## Experiments
