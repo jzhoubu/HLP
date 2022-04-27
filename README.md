@@ -87,8 +87,9 @@ If you prefer using other data location, you can change the coerrsponding file p
 - `${HLP_HOME}/experiments/hlp20210726/train` 
   - [hlp20210726.best](https://drive.google.com/file/d/10vg8-6S4Rnn7wZOxfBmn2C4il0oV0Oyk/view?usp=sharing)
 - `${HLP_HOME}/experiments/hlp20220402/train` (pretrained with latest DPR implementation)
-  - [hlp20220402.best](https://drive.google.com/file/d/118DQW2uEK4yUWaTL_4kFzA4K9s-YtHLA/view?usp=sharing)(recommand)
+  - [hlp20220402.best](https://drive.google.com/file/d/118DQW2uEK4yUWaTL_4kFzA4K9s-YtHLA/view?usp=sharing) (Recommand)
 
+More information of these checkpoints can be found in the [model-card](https://github.com/jzhoubu/HLP/tree/master/model-card.md).
 
 ## Experiments
 ### Retriever Training
