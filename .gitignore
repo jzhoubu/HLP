@@ -3,8 +3,9 @@
 *.jsonl
 *.csv
 experiments
+notebook
 command
 apex
-data
-data_*
-notebook
+./data/*
+./data/*/*
+./data_*
