@@ -37,7 +37,7 @@ git clone git@github.com:jzhoubu/HLP.git
 cd HLP
 conda create -n hlp python=3.7
 conda activate hlp
-pip install .
+pip install -r requirements.txt
 ```
 
 After downloading, please change the `HLP_HOME` variable in `biencoder_train_cfg.yaml`, `gen_embs.yaml` and `dense_retriever.yaml`. The `HLP_HOME` is the path to the HLP directory you download.
@@ -53,18 +53,15 @@ If you encounter any error in building `apex`, please refer to the official [ape
 
 
 ### Prepare Data and Models
-**Option1**: Download via Command (Recommand!)
+**Option1**: Download data via command (Recommand!)
 ```bash
 bash downloader.sh
 ```
-This command will automatically download the necessary data (about 50GB) for experiments. The downloading process may take a few hours.
+This command will automatically download the necessary data (about 50GB) for experiments. 
 
 
-**Option2**: Manual Download
-
-Besides, you can also manually download the data. Noted that after downloading, you need to move them to corresponding subdirectory as below:
-
-
+**Option2**:  Download data via webpages
+After downloading, you need to move them to corresponding subdirectory as below:
 
 **Data Location**
 - `${HLP_HOME}/data/train` (train- & val-set)
@@ -81,7 +78,7 @@ Besides, you can also manually download the data. Noted that after downloading, 
 - `${HLP_HOME}/data/corpus` (retrieval corpus)
   - [psgs_w100.tsv](https://dl.fbaipublicfiles.com/dpr/wikipedia_split/psgs_w100.tsv.gz)
 
-If you prefer using other data location, you can change the coerrsponding file path which are pre-defined in the yaml files under `conf` directory.
+If you prefer using other data location, you can change the coerrsponding path in the yaml files under `conf` directory.
 
 **Checkpoint Location**
 - `${HLP_HOME}/experiments/hlp20210726/train` 
