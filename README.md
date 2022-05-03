@@ -31,14 +31,13 @@ In this paper, we propose **H**yper**L**ink-induced **P**re-training (HLP), a pr
 ## Setup
 ### Installation
 1. Installation from the source. Python's virtual or Conda environments are recommended.
-
-```bash
-git clone git@github.com:jzhoubu/HLP.git
-cd HLP
-conda create -n hlp python=3.7
-conda activate hlp
-pip install -r requirements.txt
-```
+  ```bash
+  git clone git@github.com:jzhoubu/HLP.git
+  cd HLP
+  conda create -n hlp python=3.7
+  conda activate hlp
+  pip install -r requirements.txt
+  ```
 
 2. Please change the `HLP_HOME` variable in `biencoder_train_cfg.yaml`, `gen_embs.yaml` and `dense_retriever.yaml`. The `HLP_HOME` is the path to the HLP directory you download.
 
