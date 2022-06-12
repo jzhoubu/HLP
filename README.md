@@ -42,14 +42,12 @@ pip install -r requirements.txt
 2. Please change the `HLP_HOME` variable in `biencoder_train_cfg.yaml`, `gen_embs.yaml` and `dense_retriever.yaml`. The `HLP_HOME` is the path to the HLP directory you download.
 
 
-3. You may also need to build `apex` via command
+3. You may also need to build `apex`. For more information, please refer to the official [apex](https://github.com/NVIDIA/apex) repository.
 ```bash
 git clone https://github.com/NVIDIA/apex
 cd apex
 python -m pip install -v --disable-pip-version-check --no-cache-dir ./
 ```
-If you encounter any error in building `apex`, please refer to the official [apex](https://github.com/NVIDIA/apex) repository.
-
 
 ### Prepare Data and Models
 **Option1**: Download data via command (Recommand!)
@@ -112,10 +110,11 @@ python -m torch.distributed.launch --nproc_per_node=8 train_dense_encoder.py \
     hydra.run.dir=./experiments/finetune_nq/train \
     model_file=../../pretrain_hlp/train/dpr_biencoder.best \
     train_datasets=[nq_train] dev_datasets=[nq_dev] \
-    train=pretrain_8xV100
+    train=finetune_8xV100
 ```
 - `model_file`: a relative path to the model checkpoint
 
+Note: To fine-tuning on NQ dataset, please also use `train=finetune_8xV100` during the embedding phrase and the retrieval phrase.
 
 ### Corpus Embedding
 Generating representation vectors for the static documents dataset is a highly parallelizable process which can take up to a few days if computed on a single GPU. You might want to use multiple available GPU servers by running the script on each of them independently and specifying their own shards.
