@@ -11,7 +11,7 @@ They acchieve closed performance which is shown below.
 
 |  | NQ | TriviaQA | WQ    |
 |:-----:|:----: |:----: |:----: |
-| Zero-shot<br>Fine-tune | top1 / top5 / top100 | top1 / top5 / top100  | top1 / top5 / top100  |
+| Zero-shot<br>Fine-tune | top5 / top20 / top100 | top5 / top20 / top100  | top5 / top20 / top100  |
 | **HLP (origin)** | 51.2 / 70.2 / 82.0<br>70.9 / 81.4 / 88.0 | 65.9 / 76.9 / 84.0<br>75.3 / 82.4 / 86.9 | 49.3 / 66.9 / 80.8<br>65.5 / 76.5 / 84.5 |
 | **HLP (latest)** | 50.9 / 69.3 / 82.1<br>70.6 / 81.3 / 88.0 | / |  / | 
 
