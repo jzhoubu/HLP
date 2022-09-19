@@ -2,6 +2,7 @@
 
 
 This is the official implementation of our ACL'2022 paper "[Hyperlink-induced Pre-training for Passage Retrieval in OpenQA](https://arxiv.org/pdf/2203.06942.pdf)".
+
 Acknowledgements: our implementation is based on the [DPR](https://github.com/facebookresearch/DPR) codebase.
 
 
@@ -40,7 +41,7 @@ pip install -r requirements.txt
 2. Please change the `HLP_HOME` variable in `biencoder_train_cfg.yaml`, `gen_embs.yaml` and `dense_retriever.yaml`. The `HLP_HOME` is the path to the HLP directory you download.
 
 
-3. You may also need to build `apex`. For more information, please refer to the official [apex](https://github.com/NVIDIA/apex) repository.
+3. You may also need to build [apex](https://github.com/NVIDIA/apex). 
 ```bash
 git clone https://github.com/NVIDIA/apex
 cd apex
@@ -48,14 +49,15 @@ python -m pip install -v --disable-pip-version-check --no-cache-dir ./
 ```
 
 ### Prepare Data and Models
-**Option1**: **Download Command** (Recommand!)
+**[Option1]** **Download via Command**
 ```bash
 bash downloader.sh
 ```
 This command will automatically download the necessary data (about 50GB) for experiments. 
 
 
-**Option2**:  **Mannual Download**
+**[Option2]**  **Manually Download**
+
 Please download these data to the pre-defined location in `conf/*/*.yaml`.
 
 
@@ -63,8 +65,8 @@ Please download these data to the pre-defined location in `conf/*/*.yaml`.
 <tbody>
 <!-- START TABLE -->
 <!-- TABLE HEADER -->
-<th width="10%" rowspan="2" valign="center">Dataset</th>
-<th colspan="4" valign="center">Download</th>
+<th width="20%" rowspan="2" valign="center">Dataset</th>
+<th colspan="4" valign="center">Download Links</th>
 
 <tr>
   <td width="20%" align="center"> train </td>
@@ -142,11 +144,45 @@ Please download these data to the pre-defined location in `conf/*/*.yaml`.
 
 
 
-**Checkpoint Location**
-- `${HLP_HOME}/experiments/hlp20210726/train` 
-  - [hlp20210726.best](https://drive.google.com/file/d/10vg8-6S4Rnn7wZOxfBmn2C4il0oV0Oyk/view?usp=sharing)
-- `${HLP_HOME}/experiments/hlp20220402/train` (pretrained with latest DPR implementation)
-  - [hlp20220402.best](https://drive.google.com/file/d/118DQW2uEK4yUWaTL_4kFzA4K9s-YtHLA/view?usp=sharing) (Recommand✅)
+**Download Models**
+
+<table width="200%" align="center" border="0" cellspacing="0" cellpadding="0" frame=void rules=none>
+<tbody>
+<!-- START TABLE -->
+<!-- TABLE HEADER -->
+<th width="10%" rowspan="2" valign="center">Models</th>
+<th width="10%" rowspan="2" valign="center">Trainset</th>
+<th width="20%" rowspan="2" valign="center">Links</th>
+<th width="60%" colspan="3" valign="center"> Performance (Acc@20)</th>
+
+<tr>
+  <td width="20%" align="center"> NQ </td>
+  <td width="20%" align="center"> TriviaQA </td>
+  <td width="20%" align="center"> WebQ </td>
+</tr>
+
+<tr>
+  <td width="10%" align="center"> BM25 </td>
+  <td width="10%" align="center"> / </td>
+  <td width="20%" align="center"> / </td>
+  <td width="20%" align="center"> 62.9 </td>
+  <td width="20%" align="center"> 76.4 </td>
+  <td width="20%" align="center"> 62.8 </td>
+</tr>
+
+<tr>
+  <td width="10%" align="center"> HLP </td>
+  <td width="10%" align="center"> HLP </td>
+  <td width="20%" align="center">
+      <a href="https://drive.google.com/file/d/118DQW2uEK4yUWaTL_4kFzA4K9s-YtHLA/view?usp=sharing"> Link </a> 
+  </td>
+  <td width="20%" align="center"> 70.2 </td>
+  <td width="20%" align="center"> 76.9 </td>
+  <td width="20%" align="center"> 66.9 </td>
+</tr>
+
+</tbody>
+</table>
 
 More information of these checkpoints can be found in the [model-card](https://github.com/jzhoubu/HLP/blob/preview/model-card.md).
 
