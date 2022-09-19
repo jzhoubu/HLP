@@ -2,9 +2,7 @@
 
 
 This is the official implementation of our ACL'2022 paper "[Hyperlink-induced Pre-training for Passage Retrieval in OpenQA](https://arxiv.org/pdf/2203.06942.pdf)".
-
-Acknowledgements: our implementation is based on the [DPR](https://github.com/facebookresearch/DPR) repository with minor modifications. Huge thanks to all the authors and contributors of the DPR repository!👏
-
+Acknowledgements: our implementation is based on the [DPR](https://github.com/facebookresearch/DPR) codebase.
 
 
 ## Quick Links
