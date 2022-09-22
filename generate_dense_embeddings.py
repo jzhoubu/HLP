@@ -37,6 +37,9 @@ from dpr.utils.model_utils import (
 logger = logging.getLogger()
 setup_logger(logger)
 
+import transformers
+transformers.logging.set_verbosity_error() # disable tokenizer warning
+
 
 def gen_ctx_vectors(
     cfg: DictConfig,
@@ -119,7 +122,7 @@ def main(cfg: DictConfig):
     ctx_state = {
         key[prefix_len:]: value for (key, value) in saved_state.model_dict.items() if key.startswith("ctx_model.")
     }
-    model_to_load.load_state_dict(ctx_state)
+    model_to_load.load_state_dict(ctx_state, strict=False) # add 'strict=False' to fix version gap
 
     logger.info("reading data source: %s", cfg.ctx_src)
 
