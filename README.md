@@ -62,6 +62,74 @@ This command will automatically download the necessary data (about 50GB) for exp
 Please download these data to the pre-defined location in `conf/*/*.yaml`.
 
 
+<table width="100%" align="left" border="0" cellspacing="0" cellpadding="0" frame=void rules=none>
+<tbody>
+<!-- START TABLE -->
+<!-- TABLE HEADER -->
+<th width="20%" rowspan="2" valign="center">Dataset</th>
+<th colspan="4" valign="center">Download Links</th>
+
+<tr>
+  <td width="20%" align="center"> train </td>
+  <td width="20%" align="center"> dev </td>
+  <td width="20%" align="center"> test </td>
+  <td width="20%" align="center"> corpus </td>
+</tr>
+
+<tr>
+  <td align="center">HLP</td>
+  <td align="center"> 
+    <a href="https://drive.google.com/file/d/10YIohcsXAHKFzF2L43qkxH5zYkzTw70R/view?usp=sharing"> dl_10m.jsonl </a> 
+    <a href="https://drive.google.com/file/d/10YWz5WN_qJAXVCON47R1cWx2j8MScR1_/view?usp=sharing"> cm_10m.jsonl </a>
+  </td>
+  <td align="center"> / </td>
+  <td align="center"> / </td>
+  <td align="center"> / </td>
+</tr>
+
+<tr>
+  <td align="center">NQ</td>
+  <td align="center"> 
+    <a href="https://drive.google.com/file/d/1-3fy6UcjVJLt6CW7vRp_OkWb37WMBRBR/view?usp=sharing"> nq-train.jsonl </a> 
+  </td>
+  <td align="center"> 
+    <a href="https://drive.google.com/file/d/1-4BgqIfd8r-mK8cWP4nunOqowsG0xAJT/view?usp=sharing"> nq-dev.jsonl </a>  
+  <td align="center"> 
+    <a href="https://dl.fbaipublicfiles.com/dpr/data/retriever/nq-test.qa.csv"> nq-test.qa.csv </a>  
+  <td rowspan="3" align="center">  
+    <a href="https://dl.fbaipublicfiles.com/dpr/wikipedia_split/psgs_w100.tsv.gz"> psgs_w100.tsv </a>  
+  </td>
+</tr>
+
+<tr>
+  <td align="center">TriviaQA</td>
+  <td align="center"> 
+    <a href="https://drive.google.com/file/d/1-5ew6FNHYmauz5YoCKhnAb6wlTNpwEN6/view?usp=sharing"> trivia-train.jsonl </a> 
+  </td>
+  <td align="center">
+    <a href="https://drive.google.com/file/d/1-7qJY872hwoXN9bQQUtbV82BqVCUjSOA/view?usp=sharing"> trivia-dev.jsonl </a> 
+  </td>
+  <td align="center"> 
+    <a href="https://dl.fbaipublicfiles.com/dpr/data/retriever/trivia-test.qa.csv.gz"> trivia-test.qa.csv </a> 
+  </td>
+</tr>
+
+<tr>
+  <td align="center">WebQA</td>
+  <td align="center"> 
+    <a href="https://drive.google.com/file/d/1-7DZ9dPTGIen7_dy4816v4r3fQ-F5h3C/view?usp=sharing"> webq-train.jsonl </a> 
+  </td>
+  <td align="center"> 
+    <a href="https://drive.google.com/file/d/1-6HgRQ7ocB72rxgsaOhHIkOk176RWfau/view?usp=sharing"> webq-dev.jsonl </a> 
+  </td>
+  <td align="center">
+    <a href="https://dl.fbaipublicfiles.com/dpr/data/retriever/webquestions-test.qa.csv"> webq-test.qa.csv </a> 
+  </td>
+</tr>
+
+</tbody>
+</table>
+
 
 
 **Download Models**
@@ -110,7 +178,6 @@ Please download these data to the pre-defined location in `conf/*/*.yaml`.
   <td width="20%" align="center"> 62.8 </td>
   <td width="20%" align="center"> 76.8 </td>
 </tr>
-
 
 
 <tr>
