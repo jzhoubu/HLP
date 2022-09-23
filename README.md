@@ -87,44 +87,16 @@ Please download these data to the pre-defined location in `conf/*/*.yaml`.
   <td align="center"> / </td>
 </tr>
 
-<tr>
-  <td align="center">NQ</td>
-  <td align="center"> 
-    <a href="https://drive.google.com/file/d/1-3fy6UcjVJLt6CW7vRp_OkWb37WMBRBR/view?usp=sharing"> nq-train.jsonl </a> 
-  </td>
-  <td align="center"> 
-    <a href="https://drive.google.com/file/d/1-4BgqIfd8r-mK8cWP4nunOqowsG0xAJT/view?usp=sharing"> nq-dev.jsonl </a>  
-  <td align="center"> 
-    <a href="https://dl.fbaipublicfiles.com/dpr/data/retriever/nq-test.qa.csv"> nq-test.qa.csv </a>  
-  <td rowspan="3" align="center">  
-    <a href="https://dl.fbaipublicfiles.com/dpr/wikipedia_split/psgs_w100.tsv.gz"> psgs_w100.tsv </a>  
-  </td>
-</tr>
 
 <tr>
-  <td align="center">TriviaQA</td>
+  <td align="center">MS MARCO</td>
   <td align="center"> 
-    <a href="https://drive.google.com/file/d/1-5ew6FNHYmauz5YoCKhnAb6wlTNpwEN6/view?usp=sharing"> trivia-train.jsonl </a> 
+    <a href="https://drive.google.com/file/d/1vz73zOsRA8klXeEdYtyEcKw0vCugxSh6/view?usp=sharing"> msmarco-train.jsonl </a> 
   </td>
-  <td align="center">
-    <a href="https://drive.google.com/file/d/1-7qJY872hwoXN9bQQUtbV82BqVCUjSOA/view?usp=sharing"> trivia-dev.jsonl </a> 
+  <td colspan="2" align="center"> 
+    <a href="https://drive.google.com/file/d/1gbsioNkbXhLtkFJjQExW-9XxaU5aJdBl/view?usp=sharing"> msmarco-dev.jsonl </a> 
   </td>
-  <td align="center"> 
-    <a href="https://dl.fbaipublicfiles.com/dpr/data/retriever/trivia-test.qa.csv.gz"> trivia-test.qa.csv </a> 
-  </td>
-</tr>
-
-<tr>
-  <td align="center">WebQA</td>
-  <td align="center"> 
-    <a href="https://drive.google.com/file/d/1-7DZ9dPTGIen7_dy4816v4r3fQ-F5h3C/view?usp=sharing"> webq-train.jsonl </a> 
-  </td>
-  <td align="center"> 
-    <a href="https://drive.google.com/file/d/1-6HgRQ7ocB72rxgsaOhHIkOk176RWfau/view?usp=sharing"> webq-dev.jsonl </a> 
-  </td>
-  <td align="center">
-    <a href="https://dl.fbaipublicfiles.com/dpr/data/retriever/webquestions-test.qa.csv"> webq-test.qa.csv </a> 
-  </td>
+  <td align="center"> / </td>
 </tr>
 
 </tbody>
