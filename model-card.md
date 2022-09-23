@@ -137,7 +137,7 @@ In this repository, the released checkpoint is reproduced on April 2022, using t
   <td width="20%" align="center"> 
   <a href="https://github.com/jzhoubu/HLP/blob/master/conf/train/finetune_8xV100.yaml"> finetune_8xV100 </a> 
   </td>
-  <td width="20%" align="center"> 418M </td>
+  <td width="20%" align="center"> 840M </td>
   <td width="20%" align="center"> 70.6 </td>
   <td width="20%" align="center"> 81.3 </td>
   <td width="20%" align="center"> 88.0 </td>

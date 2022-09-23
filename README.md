@@ -62,7 +62,7 @@ This command will automatically download the necessary data (about 50GB) for exp
 Please download these data to the pre-defined location in `conf/*/*.yaml`.
 
 
-<table width="200%" align="left" border="0" cellspacing="0" cellpadding="0" frame=void rules=none>
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" frame=void rules=none>
 <tbody>
 <!-- START TABLE -->
 <!-- TABLE HEADER -->
@@ -135,20 +135,18 @@ Please download these data to the pre-defined location in `conf/*/*.yaml`.
   <td colspan="2" align="center"> 
     <a href="https://drive.google.com/file/d/1gbsioNkbXhLtkFJjQExW-9XxaU5aJdBl/view?usp=sharing"> msmarco-dev.jsonl </a> 
   </td>
-  <td align="center"> 
-  /
-  </td>
+  <td align="center"> / </td>
 </tr>
 
-
-</tbody></table>
+</tbody>
+</table>  
 
 
 
 **Download Models**
 
 
-<table width="200%" align="left" border="0" cellspacing="0" cellpadding="0" frame=void rules=none>
+<table width="100%" align="left" border="0" cellspacing="0" cellpadding="0" frame=void rules=none>
 <tbody>
 <!-- START TABLE -->
 <!-- TABLE HEADER -->
@@ -191,7 +189,6 @@ Please download these data to the pre-defined location in `conf/*/*.yaml`.
   <td width="20%" align="center"> 62.8 </td>
   <td width="20%" align="center"> 76.8 </td>
 </tr>
-
 
 
 <tr>
@@ -291,12 +288,8 @@ Please download these data to the pre-defined location in `conf/*/*.yaml`.
   <td width="20%" align="center"> / </td>
 </tr>
 
-
-
 </tbody>
 </table>
-
-
 
 
 More information of these checkpoints can be found in the [model-card](https://github.com/jzhoubu/HLP/blob/preview/model-card.md).
