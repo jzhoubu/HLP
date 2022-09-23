@@ -8,17 +8,17 @@ Acknowledgements: our implementation is based on the [DPR](https://github.com/fa
 
 ## Quick Links
 - [Overview](https://github.com/jzhoubu/HLP#overview)
-- 1. [Setup](https://github.com/jzhoubu/HLP#setup)
-  - 1.1 [Installation](https://github.com/jzhoubu/HLP#installation)
-  - 1.2 [Prepare Data and Models](https://github.com/jzhoubu/HLP#prepare-data-and-models)
-- 2. [Experiments](https://github.com/jzhoubu/HLP#experiments) 
-  - 2.1 [Retriever Training](https://github.com/jzhoubu/HLP#retriever-training) 
-  - 2.2 [Corpus Embedding](https://github.com/jzhoubu/HLP#corpus-embedding) 
-  - 2.3 [Retrieval Evalutaion](https://github.com/jzhoubu/HLP#retrieval-evalutaion) 
-- 3. [Others](https://github.com/jzhoubu/HLP#others) 
-  - 3.1 [Data Formats for Training Retriever](https://github.com/jzhoubu/HLP#data-formats-for-training-retriever)
-  - 3.2 [Processed Wikipedai Graph](https://github.com/jzhoubu/HLP#processed-wikipedia-graph)
-  - 3.3 [Examples of HLP Q-P pairs](https://github.com/jzhoubu/HLP#examples-of-hlp-q-p-pairs)
+- [Setup](https://github.com/jzhoubu/HLP#setup)
+  - [Installation](https://github.com/jzhoubu/HLP#installation)
+  - [Prepare Data and Models](https://github.com/jzhoubu/HLP#prepare-data-and-models)
+- [Experiments](https://github.com/jzhoubu/HLP#experiments) 
+  - [Retriever Training](https://github.com/jzhoubu/HLP#retriever-training) 
+  - [Corpus Embedding](https://github.com/jzhoubu/HLP#corpus-embedding) 
+  - [Retrieval Evalutaion](https://github.com/jzhoubu/HLP#retrieval-evalutaion) 
+- [Others](https://github.com/jzhoubu/HLP#others) 
+  - [Data Formats for Training Retriever](https://github.com/jzhoubu/HLP#data-formats-for-training-retriever)
+  - [Processed Wikipedai Graph](https://github.com/jzhoubu/HLP#processed-wikipedia-graph)
+  - [Examples of HLP Q-P pairs](https://github.com/jzhoubu/HLP#examples-of-hlp-q-p-pairs)
 - [Citation](https://github.com/jzhoubu/HLP#citation)
 
 ## Overview
@@ -28,8 +28,8 @@ In this paper, we propose **H**yper**L**ink-induced **P**re-training (HLP), a pr
 
 **Note**: the hyperlink-induced Q-P pairs are mostly semantically closed but lexically diverse, which could be considered/used as unsupervised paraphrase extracted from internet. Some examples are shared [here](https://github.com/jzhoubu/HLP#examples-of-hlp-q-p-pairs). 
 
-## 1. Setup
-### 1.1 Installation
+## Setup
+### Installation
 1. Installation from the source. Python's virtual or Conda environments are recommended.
 ```bash
 git clone git@github.com:jzhoubu/HLP.git
@@ -49,7 +49,7 @@ cd apex
 python -m pip install -v --disable-pip-version-check --no-cache-dir ./
 ```
 
-### 1.2 Prepare Data and Models
+### Prepare Data and Models
 **[Option1]** **Download Data via Command**
 ```bash
 bash downloader.sh
@@ -294,8 +294,8 @@ Please download these data to the pre-defined location in `conf/*/*.yaml`.
 
 More information of these checkpoints can be found in the [model-card](https://github.com/jzhoubu/HLP/blob/preview/model-card.md).
 
-## 2. Experiments
-### 2.1 Retriever Training
+## Experiments
+### Retriever Training
 Below is an example to pre-train HLP. 
 
 ```bash
@@ -325,7 +325,7 @@ python -m torch.distributed.launch --nproc_per_node=8 train_dense_encoder.py \
 
 Note: To fine-tuning on NQ dataset, please also use `train=finetune_8xV100` during the embedding phrase and the retrieval phrase.
 
-### 2.2 Corpus Embedding
+### Corpus Embedding
 Generating representation vectors for the static documents dataset is a highly parallelizable process which can take up to a few days if computed on a single GPU. You might want to use multiple available GPU servers by running the script on each of them independently and specifying their own shards.
 
 Below is an example to generate embeddings of the wikipedia corpus.
@@ -346,7 +346,7 @@ python ./generate_dense_embeddings.py \
 - `num_shards`: total amount of data shards
 
 
-### 2.3 Retrieval Evalutaion
+### Retrieval Evalutaion
 Below is an example to evaluate a model on NQ test set.
 ```bash
 python dense_retriever.py \
@@ -365,9 +365,9 @@ python dense_retriever.py \
 
 
 
-## 3. Others
+## Others
 
-### 3.1 Data Formats for Training Retriever
+### Data Formats for Training Retriever
 Below shows data format of our train and dev data (i.e. `dl_10m.jsonl` and `nq-train.json`). Our implementation can work with json and jsonl files. 
 More format descriptions can refer to [here](https://github.com/facebookresearch/DPR#resources--data-formats).
 
@@ -383,7 +383,7 @@ More format descriptions can refer to [here](https://github.com/facebookresearch
 ]
 ```
 
-### 3.2 Processed Wikipedai Graph
+### Processed Wikipedai Graph
 We also release our processed wikipedia graph which considers passages as nodes and hyperlinks as links. Further details can be found in the Section 3 in our paper. Click [here](https://drive.google.com/file/d/1-1v3_rsby0lQnduOw1YRIvrRVBV2xbnP/view?usp=sharing) to download. 
 
 ```python
@@ -410,7 +410,7 @@ print(title2info['Anarchism_0'])
 # }
 
 ```
-### 3.3 Examples of HLP Q-P pairs
+### Examples of HLP Q-P pairs
 <table width="100%" align="left" border="0" cellspacing="0" cellpadding="0" frame=void rules=none>
 <tbody>
 <!-- START TABLE -->
