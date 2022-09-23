@@ -140,8 +140,8 @@ Please download these data to the pre-defined location in `conf/*/*.yaml`.
   </td>
 </tr>
 
-
-</tbody></table>
+</tbody>
+</table>
 
 
 
@@ -290,8 +290,6 @@ Please download these data to the pre-defined location in `conf/*/*.yaml`.
   <td width="20%" align="center"> / </td>
   <td width="20%" align="center"> / </td>
 </tr>
-
-
 
 </tbody>
 </table>
