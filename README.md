@@ -17,7 +17,8 @@ Acknowledgements: our implementation is based on the [DPR](https://github.com/fa
   - [Retrieval Evalutaion](https://github.com/jzhoubu/HLP#retrieval-evalutaion) 
 - [Others](https://github.com/jzhoubu/HLP#others) 
   - [Data Formats for Training Retriever](https://github.com/jzhoubu/HLP#data-formats-for-training-retriever)
-  - [Processed Wikipedai Graph](https://github.com/jzhoubu/HLP#our-wikipedia-graph)
+  - [Processed Wikipedai Graph](https://github.com/jzhoubu/HLP#processed-wikipedia-graph)
+  - [Examples of HLP Q-P pairs](https://github.com/jzhoubu/HLP#examples-of-hlp-q-p-pairs)
 - [Citation](https://github.com/jzhoubu/HLP#citation)
 
 ## Overview
@@ -25,7 +26,7 @@ In this paper, we propose **H**yper**L**ink-induced **P**re-training (HLP), a pr
 
 <p align="center"><img width="90%" src="figures/hlp.jpg" /></p>
 
-
+**Note**: the hyperlink-induced Q-P pairs are mostly semantically closed but lexically diverse, which could be considered/used as unsupervised paraphrase extracted from internet. Some examples are shared [here](https://github.com/jzhoubu/HLP#examples-of-hlp-q-p-pairs). 
 
 ## Setup
 ### Installation
@@ -49,19 +50,19 @@ python -m pip install -v --disable-pip-version-check --no-cache-dir ./
 ```
 
 ### Prepare Data and Models
-**[Option1]** **Download via Command**
+**[Option1]** **Download Data via Command**
 ```bash
 bash downloader.sh
 ```
 This command will automatically download the necessary data (about 50GB) for experiments. 
 
 
-**[Option2]**  **Manually Download**
+**[Option2]**  **Download Data Manually**
 
 Please download these data to the pre-defined location in `conf/*/*.yaml`.
 
 
-<table width="200%" align="center" border="0" cellspacing="0" cellpadding="0" frame=void rules=none>
+<table width="200%" align="left" border="0" cellspacing="0" cellpadding="0" frame=void rules=none>
 <tbody>
 <!-- START TABLE -->
 <!-- TABLE HEADER -->
@@ -146,43 +147,157 @@ Please download these data to the pre-defined location in `conf/*/*.yaml`.
 
 **Download Models**
 
-<table width="200%" align="center" border="0" cellspacing="0" cellpadding="0" frame=void rules=none>
+
+<table width="200%" align="left" border="0" cellspacing="0" cellpadding="0" frame=void rules=none>
 <tbody>
 <!-- START TABLE -->
 <!-- TABLE HEADER -->
-<th width="10%" rowspan="2" valign="center">Models</th>
-<th width="10%" rowspan="2" valign="center">Trainset</th>
-<th width="20%" rowspan="2" valign="center">Links</th>
-<th width="60%" colspan="3" valign="center"> Performance (Acc@20)</th>
+<th width="10%" rowspan="3" valign="center">Models</th>
+<th width="10%" rowspan="3" valign="center">Trainset</th>
+<th width="10%" rowspan="3" valign="center">TrainConfig</th>
+<th width="20%" rowspan="3" valign="center">Size</th>
+<th width="60%" colspan="9" valign="center">Zero-shot Performance</th>
 
 <tr>
-  <td width="20%" align="center"> NQ </td>
-  <td width="20%" align="center"> TriviaQA </td>
-  <td width="20%" align="center"> WebQ </td>
+  <td width="20%" colspan="3" align="center"> NQ </td>
+  <td width="20%" colspan="3" align="center"> TriviaQA </td>
+  <td width="20%" colspan="3" align="center"> WebQ </td>
+</tr>
+
+<tr>
+  <td width="20%"  align="center"> Top5 </td>
+  <td width="20%"  align="center"> Top20 </td>
+  <td width="20%"  align="center"> Top100 </td>
+  <td width="20%"  align="center"> Top5 </td>
+  <td width="20%"  align="center"> Top20 </td>
+  <td width="20%"  align="center"> Top100 </td>
+  <td width="20%"  align="center"> Top5 </td>
+  <td width="20%"  align="center"> Top20 </td>
+  <td width="20%"  align="center"> Top100 </td>
 </tr>
 
 <tr>
   <td width="10%" align="center"> BM25 </td>
   <td width="10%" align="center"> / </td>
   <td width="20%" align="center"> / </td>
+  <td width="20%" align="center"> / </td>
+  <td width="20%" align="center"> 43.6 </td>
   <td width="20%" align="center"> 62.9 </td>
+  <td width="20%" align="center"> 78.1 </td>
+  <td width="20%" align="center"> 66.4 </td>
   <td width="20%" align="center"> 76.4 </td>
+  <td width="20%" align="center"> 83.2 </td>
+  <td width="20%" align="center"> 42.6 </td>
   <td width="20%" align="center"> 62.8 </td>
+  <td width="20%" align="center"> 76.8 </td>
+</tr>
+
+
+
+<tr>
+  <td width="10%" align="center"> 
+  <a href="https://drive.google.com/file/d/1-2VCWwZepRPLjs0l-nhT40mSOLEfBSgc/view?usp=sharing"> DL </a> 
+  </td>
+  <td width="10%" align="center"> 
+  <a href="https://drive.google.com/file/d/10YIohcsXAHKFzF2L43qkxH5zYkzTw70R/view?usp=sharing"> dl_10m </a>
+  </td>
+  <td width="20%" align="center"> 
+  <a href="https://github.com/jzhoubu/HLP/blob/master/conf/train/pretrain_8xV100.yaml"> pretrain_8xV100 </a> 
+  </td>
+  <td width="20%" align="center"> 418M </td>
+  <td width="20%" align="center"> 49.0 </td>
+  <td width="20%" align="center"> 67.8 </td>
+  <td width="20%" align="center"> 79.7 </td>
+  <td width="20%" align="center"> 62.0 </td>
+  <td width="20%" align="center"> 73.8 </td>
+  <td width="20%" align="center"> 82.1 </td>
+  <td width="20%" align="center"> 48.4 </td>
+  <td width="20%" align="center"> 67.1 </td>
+  <td width="20%" align="center"> 79.5 </td>
 </tr>
 
 <tr>
-  <td width="10%" align="center"> HLP </td>
-  <td width="10%" align="center"> HLP </td>
-  <td width="20%" align="center">
-      <a href="https://drive.google.com/file/d/118DQW2uEK4yUWaTL_4kFzA4K9s-YtHLA/view?usp=sharing"> Link </a> 
+  <td width="10%" align="center"> 
+  <a href="https://drive.google.com/file/d/1-10eOZ0W86kkz3X33_dsrjtxy-Rht6ts/view?usp=sharing"> CM </a> 
   </td>
-  <td width="20%" align="center"> 70.2 </td>
-  <td width="20%" align="center"> 76.9 </td>
-  <td width="20%" align="center"> 66.9 </td>
+  <td width="10%" align="center"> 
+  <a href="https://drive.google.com/file/d/10YWz5WN_qJAXVCON47R1cWx2j8MScR1_/view?usp=sharing"> cm_10m </a>
+  </td>
+  <td width="20%" align="center"> 
+  <a href="https://github.com/jzhoubu/HLP/blob/master/conf/train/pretrain_8xV100.yaml"> pretrain_8xV100 </a> 
+  </td>
+  <td width="20%" align="center"> 418M </td>
+  <td width="20%" align="center"> 42.5 </td>
+  <td width="20%" align="center"> 62.2 </td>
+  <td width="20%" align="center"> 77.9 </td>
+  <td width="20%" align="center"> 63.2 </td>
+  <td width="20%" align="center"> 75.8 </td>
+  <td width="20%" align="center"> 83.7 </td>
+  <td width="20%" align="center"> 45.4 </td>
+  <td width="20%" align="center"> 64.5 </td>
+  <td width="20%" align="center"> 78.9 </td>
+</tr>  
+
+
+<tr>
+  <td width="10%" align="center"> 
+  <a href="https://drive.google.com/file/d/1-51Z-8li8IEDAeDjoyd2hUj_rwFhWc88/view?usp=sharing"> HLP </a> 
+  </td>
+  <td width="10%" align="center"> 
+    <a href="https://drive.google.com/file/d/10YIohcsXAHKFzF2L43qkxH5zYkzTw70R/view?usp=sharing"> dl_10m </a>
+    <a href="https://drive.google.com/file/d/10YWz5WN_qJAXVCON47R1cWx2j8MScR1_/view?usp=sharing"> cm_10m </a>
+  </td>
+  <td width="20%" align="center"> 
+  <a href="https://github.com/jzhoubu/HLP/blob/master/conf/train/pretrain_8xV100.yaml"> pretrain_8xV100 </a> 
+  </td>
+  <td width="20%" align="center"> 418M </td>
+  <td width="20%" align="center"> 50.9 </td>
+  <td width="20%" align="center"> 69.3 </td>
+  <td width="20%" align="center"> 82.1 </td>
+  <td width="20%" align="center"> 65.3 </td>
+  <td width="20%" align="center"> 77.0 </td>
+  <td width="20%" align="center"> 84.1 </td>
+  <td width="20%" align="center"> 49.1 </td>
+  <td width="20%" align="center"> 67.4 </td>
+  <td width="20%" align="center"> 80.5 </td>
 </tr>
+
+<tr>
+  <td width="10%" colspan="1" align="center"> <b>Models</b> </td>
+  <td width="10%" colspan="1" align="center"> <b>TuneSet</b> </td>
+  <td width="10%" colspan="1" align="center"> <b>TuneConfig</b></td>
+  <td width="10%" colspan="1" align="center"> <b>Size</b> </td>
+  <td width="10%" colspan="9" align="center"> <b>Finetune Performance</b>  </td>
+</tr>
+
+<tr>
+  <td width="10%" align="center">  HLP </td>
+  <td width="10%" align="center"> 
+  <a href="https://drive.google.com/file/u/4/d/1-3fy6UcjVJLt6CW7vRp_OkWb37WMBRBR/view?usp=sharing"> nq-train </a>
+  
+  </td>
+  <td width="20%" align="center"> 
+  <a href="https://github.com/jzhoubu/HLP/blob/master/conf/train/finetune_8xV100.yaml"> finetune_8xV100 </a> 
+  </td>
+  <td width="20%" align="center"> 840M </td>
+  <td width="20%" align="center"> 70.6 </td>
+  <td width="20%" align="center"> 81.3 </td>
+  <td width="20%" align="center"> 88.0 </td>
+  <td width="20%" align="center"> / </td>
+  <td width="20%" align="center"> / </td>
+  <td width="20%" align="center"> / </td>
+  <td width="20%" align="center"> / </td>
+  <td width="20%" align="center"> / </td>
+  <td width="20%" align="center"> / </td>
+</tr>
+
+
 
 </tbody>
 </table>
+
+
+
 
 More information of these checkpoints can be found in the [model-card](https://github.com/jzhoubu/HLP/blob/preview/model-card.md).
 
@@ -302,6 +417,53 @@ print(title2info['Anarchism_0'])
 # }
 
 ```
+### Examples of HLP Q-P pairs
+<table width="100%" align="left" border="0" cellspacing="0" cellpadding="0" frame=void rules=none>
+<tbody>
+<!-- START TABLE -->
+<!-- TABLE HEADER -->
+
+<th width="40%" colspan="1" valign="center">
+  Query
+</th>
+<th width="60%" colspan="1" valign="center">
+  Passage
+</th>
+
+
+<tr>
+  <td align="left" valign="top"> 
+  <b>Title</b>: 
+    Abby Kelley <br>
+  <b>Text</b>: 
+    Liberty Farm in <u> Worcester, Massachusetts </u>, the home of Abby Kelley and Stephen Symonds Foster, was designated a National Historic Landmark because of its association with their lives of working for abolitionism. <br>
+  </td>
+  <td align="left" valign="top">
+  <b>Title</b>:  
+    Worcester, Massachusetts <br>
+  <b>Text</b>: 
+    Two of the nation’s most radical abolitionists, <u>Abby Kelley</u> Foster and her husband Stephen S. Foster, adopted Worcester as their home, as did Thomas Wentworth Higginson, the editor of The Atlantic Monthly and Emily Dickinson’s avuncular correspondent, and Unitarian minister Rev. Edward Everett Hale. The area was already home to Lucy Stone, Eli Thayer, and Samuel May Jr. They were joined in their political activities by networks of related Quaker families such as the Earles and the Chases, whose organizing efforts were crucial to ...
+  </td>
+</tr>
+
+<tr>
+  <td align="left" valign="top"> 
+  <b>Title</b>: Daniel Gormally <br>
+  <b>Text</b>: In 2015 he tied for the second place with <u>David Howell</u> and Nicholas Pert in the 102nd British Championship andeventually finished fourth on tiebreak.
+  </td>
+  <td align="left" valign="top">
+  <b>Title</b>: Nicholas Pert <br>
+  <b>Text</b>: In 2015, Pert tied for 2nd–4th with <u>David Howell</u> and <u>Daniel Gormally</u>, finishing third on tiebreak, in the British Chess Championship and later that year, he finished runner-up in the inaugural British Knockout Championship, which was held alongside the London Chess Classic. In this latter event, Pert, who replaced Nigel Short after his late withdrawal, eliminated Jonathan Hawkins in the quarterfinals and Luke McShane in the semifinals, then he lost to David Howell 4–6 in the final.
+  </td>
+</tr>
+
+
+</tbody>
+</table>
+
+
+
+
 
 
 

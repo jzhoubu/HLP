@@ -18,7 +18,6 @@ import math
 import torch
 from torch import Tensor as T
 from typing import List, Iterator, Callable, Tuple
-from tqdm import tqdm
 
 
 logger = logging.getLogger()
@@ -52,7 +51,7 @@ def read_data_from_jsonl_files(paths: List[str]) -> List:
     for i, path in enumerate(paths):
         with open(path, "r", encoding="utf-8") as f:
             logger.info("Reading file %s" % path)
-            for line in tqdm(f):
+            for line in f:
                 results.append(json.loads(line))
             logger.info("Aggregated data size: {}".format(len(results)))
     return results
