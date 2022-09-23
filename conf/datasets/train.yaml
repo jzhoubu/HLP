@@ -32,9 +32,16 @@ webq_dev:
   _target_: dpr.data.biencoder_data.JsonlQADataset
   file: ${HLP_HOME}/data/train/webq-dev.jsonl
 
-marco_dev:
+
+marco_train:  # Source: BEIR
   _target_: dpr.data.biencoder_data.JsonlQADataset
-  file: ${HLP_HOME}/data/train/marco-dev.json
+  file: ${HLP_HOME}/data/train/msmarco-train.jsonl
 
+marco_dev:  # Source: BEIR
+  _target_: dpr.data.biencoder_data.JsonlQADataset
+  file: ${HLP_HOME}/data/train/msmarco-dev.jsonl
 
+marco_dev_30neg:  # Source: BEIR
+  _target_: dpr.data.biencoder_data.JsonlQADataset
+  file: ${HLP_HOME}/data/train/msmarco-dev-30neg.jsonl
 
