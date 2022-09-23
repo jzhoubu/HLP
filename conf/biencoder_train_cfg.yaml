@@ -16,7 +16,7 @@ loss_scale_factors:
 do_lower_case: True
 
 # fix_ctx_encoder: False
-val_av_rank_start_epoch: 30
+val_av_rank_start_epoch: 0
 seed: 12345
 checkpoint_file_name: dpr_biencoder
 

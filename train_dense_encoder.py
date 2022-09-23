@@ -72,7 +72,7 @@ class BiEncoderTrainer(object):
         model_file = get_model_file(cfg, cfg.checkpoint_file_name)
         saved_state = None
         if model_file:
-            saved_state = load_states_from_checkpoint(model_file)
+            saved_state = load_states_from_checkpoint(model_file) # add 'strict=False' to fix version conflict
             set_cfg_params_from_state(saved_state.encoder_params, cfg)
 
         tensorizer, model, optimizer = init_biencoder_components(cfg.encoder.encoder_model_type, cfg)
@@ -602,7 +602,7 @@ class BiEncoderTrainer(object):
         model_to_load = get_model_obj(self.biencoder)
         logger.info("Loading saved model state ...")
 
-        model_to_load.load_state(saved_state)
+        model_to_load.load_state(saved_state, strict=True) # following PDR to add 'strict=True'
 
         if not self.cfg.ignore_checkpoint_optimizer:
             if saved_state.optimizer_dict:

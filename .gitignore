@@ -2,9 +2,11 @@
 *.json
 *.jsonl
 *.csv
-experiments
-command
-apex
-data
-data_*
-notebook
+/experiments
+/command
+/apex
+/models
+/data
+/notebook
+__pychache__
+

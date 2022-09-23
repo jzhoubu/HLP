@@ -2,7 +2,7 @@
 
 batch_size: 50
 gradient_accumulation_steps: 1
-num_train_epochs: 1
+num_train_epochs: 5
 num_eval_per_epoch: 1
 
 hard_negatives: 0
