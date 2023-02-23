@@ -3,7 +3,9 @@
 
 This is the official implementation of our ACL'2022 paper "[Hyperlink-induced Pre-training for Passage Retrieval in OpenQA](https://arxiv.org/pdf/2203.06942.pdf)".
 
-Acknowledgements: our implementation is based on the [DPR](https://github.com/facebookresearch/DPR) codebase.
+[Update-20230223] We add evaluation on the widely used BEIR benchmark. See [here](https://github.com/jzhoubu/HLP#zero-shot-performance-on-beir-benchmark)
+
+
 
 
 ## Quick Links
@@ -19,6 +21,8 @@ Acknowledgements: our implementation is based on the [DPR](https://github.com/fa
   - [Data Formats for Training Retriever](https://github.com/jzhoubu/HLP#data-formats-for-training-retriever)
   - [Processed Wikipedai Graph](https://github.com/jzhoubu/HLP#processed-wikipedia-graph)
   - [Examples of HLP Q-P pairs](https://github.com/jzhoubu/HLP#examples-of-hlp-q-p-pairs)
+  - [Zero-shot Performance on BEIR Benchmark](https://github.com/jzhoubu/HLP#zero-shot-performance-on-beir-benchmark)
+
 - [Citation](https://github.com/jzhoubu/HLP#citation)
 
 ## Overview
@@ -294,6 +298,10 @@ Please download these data to the pre-defined location in `conf/*/*.yaml`.
 
 More information of these checkpoints can be found in the [model-card](https://github.com/jzhoubu/HLP/blob/preview/model-card.md).
 
+
+
+
+
 ## Experiments
 ### Retriever Training
 Below is an example to pre-train HLP. 
@@ -454,6 +462,23 @@ print(title2info['Anarchism_0'])
 </tbody>
 </table>
 
+
+### Zero-shot Performance on BEIR Benchmark
+|  Dataset   |  Performance (NDCG@10)  |
+|:----:|:----:|
+| ArguAna  | 0.3444 |
+| climate-fever | 0.2086 |
+| DBPedia | 0.3032 |
+| FEVER | 0.64085 |
+| FiQA | 0.1326 |
+| HotpotQA | 0.55039 |
+| NFCorpus | 0.29115 |
+| NQ | 0.23598 |
+| SCIDOCS | 0.12766 |
+| SciFact | 0.60745 |
+| TREC-COVID | 0.36339 |
+| Touche-2020 | 0.08941|
+| MSMARCO-dev (MRR@10) | 0.10953|
 
 
 
