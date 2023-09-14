@@ -464,21 +464,24 @@ print(title2info['Anarchism_0'])
 
 
 ### Zero-shot Performance on BEIR Benchmark
-|  Dataset   |  Performance (NDCG@10)  |
-|:----:|:----:|
-| ArguAna  | 0.3444 |
-| climate-fever | 0.2086 |
-| DBPedia | 0.3032 |
-| FEVER | 0.64085 |
-| FiQA | 0.1326 |
-| HotpotQA | 0.55039 |
-| NFCorpus | 0.29115 |
-| NQ | 0.23598 |
-| SCIDOCS | 0.12766 |
-| SciFact | 0.60745 |
-| TREC-COVID | 0.36339 |
-| Touche-2020 | 0.08941|
-| MSMARCO-dev (MRR@10) | 0.10953|
+NDCG@10 performance Before and After tuning on MSMARCO dataset
+
+|  Dataset   |  Before  | After | 
+|:----:|:----:|:----:|
+| ArguAna  | 34.4 | 51.8 |
+| climate-fever | 20.9 | 17.0 |
+| DBPedia | 30.3 | 33.5 |
+| FEVER | 64.1 | 68.9 |
+| FiQA | 13.2 | 25.8 |
+| HotpotQA | 55.0 |  55.0 |
+| NFCorpus | 29.1 | 32.9 |
+| NQ | 23.6 | 45.6 |
+| SCIDOCS | 12.8 | 14.7 |
+| SciFact | 60.7 | 53.7 |
+| TREC-COVID | 36.3 | 63.1 |
+| Touche-2020 | 8.9 | 21.8 |
+| Avg | 32.4 | 40.3 |
+| MSMARCO-dev (MRR@10) | 11.0 | 
 
 
 

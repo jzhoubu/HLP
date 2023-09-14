@@ -45,3 +45,7 @@ marco_dev_30neg:  # Source: BEIR
   _target_: dpr.data.biencoder_data.JsonlQADataset
   file: ${HLP_HOME}/data/train/msmarco-dev-30neg.jsonl
 
+wiki_next_passage:  # Source: Self
+  _target_: dpr.data.biencoder_data.JsonlQADataset
+  file: ${HLP_HOME}/data/train/wiki_next_passage_10m.jsonl
+

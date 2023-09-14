@@ -258,9 +258,9 @@ class BiEncoder(nn.Module):
 
     def load_state(self, saved_state: CheckpointState):
         # TODO: make a long term HF compatibility fix
-        if "question_model.embeddings.position_ids" in saved_state.model_dict:
-            del saved_state.model_dict["question_model.embeddings.position_ids"]
-            del saved_state.model_dict["ctx_model.embeddings.position_ids"]
+        #if "question_model.embeddings.position_ids" in saved_state.model_dict:
+        #    del saved_state.model_dict["question_model.embeddings.position_ids"]
+        #    del saved_state.model_dict["ctx_model.embeddings.position_ids"]
         self.load_state_dict(saved_state.model_dict)
 
     def get_state_dict(self):

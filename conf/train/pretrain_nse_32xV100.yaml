@@ -1,19 +1,18 @@
 # @package _group_
 
-
-batch_size: 32
+batch_size: 50
 gradient_accumulation_steps: 1
-num_train_epochs: 40
+num_train_epochs: 5
 eval_epochs: 1
 
-hard_negatives: 1
-other_negatives: 0
-shared_encoder: False
+hard_negatives: 0
+other_negatives: 1
+shared_encoder: False # false
 p_max_length: 256
-q_max_length: 256
+q_max_length: 150
 warmup_rate: 0.1
-train_insert_title: True
-valid_insert_title: True
+train_insert_title: True # False
+valid_insert_title: True # nq_dev
 
 adam_eps: 1e-8
 adam_betas: (0.9, 0.999)

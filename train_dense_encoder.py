@@ -195,7 +195,7 @@ class BiEncoderTrainer(object):
         else:
             scheduler = get_schedule_linear(self.optimizer, warmup_steps, total_updates)
 
-        eval_step = math.ceil(updates_per_epoch / cfg.train.num_eval_per_epoch)
+        eval_step = math.ceil(updates_per_epoch * cfg.train.eval_epochs)
         logger.info("  Eval step = %d", eval_step)
         logger.info("***** Training *****")
 
@@ -283,7 +283,7 @@ class BiEncoderTrainer(object):
             batches += 1
             if (i + 1) % log_result_step == 0:
                 logger.info(
-                    "Eval step: %d , used_time=%f sec., loss=%f ",
+                    "Eval step: %d , used_time=%f sec., loss=%f",
                     i,
                     time.time() - start_time,
                     loss.item(),
@@ -527,13 +527,17 @@ class BiEncoderTrainer(object):
 
             if i % log_result_step == 0:
                 lr = self.optimizer.param_groups[0]["lr"]
+
+                global_batch_size = cfg.train.batch_size * cfg.n_gpu * cfg.distributed_world_size
+                acc_string = f"{correct_cnt}/{global_batch_size}={correct_cnt/global_batch_size:.2f}"
                 logger.info(
-                    "Epoch: %d: Step: %d/%d, loss=%f, lr=%f",
+                    "Epoch: %d: Step: %d/%d, loss=%f, lr=%f, acc=%s",
                     epoch,
                     data_iteration,
                     epoch_batches,
                     loss.item(),
                     lr,
+                    acc_string
                 )
 
             if (i + 1) % rolling_loss_step == 0:

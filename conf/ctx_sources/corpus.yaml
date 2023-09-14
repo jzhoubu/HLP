@@ -4,6 +4,11 @@ dpr_wiki:
   file: ${HLP_HOME}/data/corpus/psgs_w100.tsv
   id_prefix: 'dpr_wiki:'
 
+wiki103_train:
+  _target_: dpr.data.retriever_data.CsvCtxSrc
+  file: ${HLP_HOME}/data/corpus/wiki103_train.tsv
+  id_prefix: 'dpr_wiki:'
+
 
 bioasq_passages:
   _target_: dpr.data.retriever_data.CsvCtxSrc
